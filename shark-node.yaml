@@ -1,0 +1,42 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: shark
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: shark-demo-deployment
+  namespace: shark
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: shark-demo  
+    spec:
+      containers: 
+      - name: shark-demo 
+        image: adamquan/nodejs-image-demo
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        env:
+        - name: ELASTIC_APM_SECRET_TOKEN
+          # Put the decoded token here in single quotes
+          # GCP
+          value: 'm4cf82r8kpbj66gnngprdrfn'
+          # Minikube
+          # value: '45r9qx8bq5p2c842ppnqd84g'
+        - name: ELASTIC_APM_SERVER_URL
+          # Put the URL for the APM service here.  Use the FQDN and port wrap in single quotes
+          # GCP
+          value: "https://10.0.41.22:8200"
+          # Minikube
+          # value: 'http://10.102.4.162:8200'
+        - name: ELASTIC_APM_SERVICE_NAME
+          # Name that will appear in the APM UI
+          value: "Shark"
+        - name: ELASTIC_APM_VERIFY_SERVER_CERT
+          value: "false"
