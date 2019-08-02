@@ -108,4 +108,7 @@ kubectl port-forward service/shark-demo-deployment 8080 -n shark
 
 Access the application: http://localhost:8080
 
-7.
+7. Scale & upgrade
+
+8. Deploy Metricbeat
+
