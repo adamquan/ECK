@@ -14,7 +14,7 @@ spec:
           - name: elasticsearch
             resources:
               limits:
-                memory: 3Gi  
+                memory: 2Gi  
     volumeClaimTemplates:
     - metadata:
         name: data

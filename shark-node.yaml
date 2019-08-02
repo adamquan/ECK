@@ -25,16 +25,10 @@ spec:
         env:
         - name: ELASTIC_APM_SECRET_TOKEN
           # Put the decoded token here in single quotes
-          # GCP
-          value: 'm4cf82r8kpbj66gnngprdrfn'
-          # Minikube
-          # value: '45r9qx8bq5p2c842ppnqd84g'
+          value: '4l4hqqvflsjz5zx5hwq4l2zx'
         - name: ELASTIC_APM_SERVER_URL
           # Put the URL for the APM service here.  Use the FQDN and port wrap in single quotes
-          # GCP
-          value: "https://10.0.41.22:8200"
-          # Minikube
-          # value: 'http://10.102.4.162:8200'
+          value: "https://10.98.46.159:8200"
         - name: ELASTIC_APM_SERVICE_NAME
           # Name that will appear in the APM UI
           value: "Shark"
