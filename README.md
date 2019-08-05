@@ -1,6 +1,9 @@
 # Elastic Cloud on Kubernetes
  Elastic Cloud on Kubernetes
 
+See detailed instructions from the PDF file, before the blog goes public.
+
+
 1. Minikube
 
 If you need to delete your old cluster, run:
