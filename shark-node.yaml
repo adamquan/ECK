@@ -25,10 +25,10 @@ spec:
         env:
         - name: ELASTIC_APM_SECRET_TOKEN
           # Put the decoded token here in single quotes
-          value: '4l4hqqvflsjz5zx5hwq4l2zx'
+          value: 'm9mc6dv7mgbct8qtg29fgqxk'
         - name: ELASTIC_APM_SERVER_URL
-          # Put the URL for the APM service here.  Use the FQDN and port wrap in single quotes
-          value: "https://10.98.46.159:8200"
+          # Put the URL for the APM service here.
+          value: "https://apm-server-sample-apm-http.default.svc.cluster.local:8200"
         - name: ELASTIC_APM_SERVICE_NAME
           # Name that will appear in the APM UI
           value: "Shark"
